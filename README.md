@@ -11,10 +11,41 @@ This repository contains the utility scripts that can help reduce the work and a
 The script can update all the branches of the git subfolders and remove the stale branches. It will not resolve the conflict.
 Download the script and run the script.
 
-```shell
+```Shell
 wget https://raw.githubusercontent.com/dhavalgajjarin/utilities/main/git-update-all-subfolders.sh
 # git-update-all-subfolders.sh {path-to-parent-folder}
 git-update-all-subfolders.sh /opt/repos
+```
+
+---
+
+## ![Windows Logo](https://cdn-icons-png.flaticon.com/16/270/270831.png) Windows
+
+### [Safe start windows service (Cmd)](SafeServiceStart.bat)
+
+The script is used to start remote/local windows service and wait for service is started. To run these scripts, _**you should be a user with administration rights on the target machine and running this from a computer that is a member of the same domain.**_
+
+```Batchfile
+# SafeServiceStart.bat [target-system] [service-name]
+SafeServiceStart.bat TEST-APP-SERVER Application
+```
+
+### [Safe stop windows service (Cmd)](SafeServiceStop.bat)
+
+The script is used to stop remote/local windows service and wait for service is stopped. To run these scripts, _**you should be a user with administration rights on the target machine and running this from a computer that is a member of the same domain.**_
+
+```Batchfile
+# SafeServiceStop.bat [target-system] [service-name]
+SafeServiceStop.bat TEST-APP-SERVER Application
+```
+
+### [Safe restart windows service (Cmd)](SafeServiceRestart.bat)
+
+The script is used to restart remote/local windows service and wait for service is stopped and started. To run these scripts, _**you should be a user with administration rights on the target machine and running this from a computer that is a member of the same domain.**_
+
+```Batchfile
+# SafeServiceRestart.bat [target-system] [service-name]
+SafeServiceRestart.bat TEST-APP-SERVER Application
 ```
 
 ---
